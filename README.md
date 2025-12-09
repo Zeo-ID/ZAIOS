@@ -1,176 +1,7 @@
-# ZAIOS – Zentral All-In-One System  
-Ein modulares, Linux-basiertes Open-Source-Betriebssystem für IT-, HR-, Organisation- und Servicemanagement.
+# ZAIOS – Central All-In-One System  
+A modular, Linux-based open-source operating system for IT, HR, organizational, and service management.
 
-[🇩🇪 Deutsch](#-deutsch) | [🇬🇧 English](#-english-version)
-
----
-
-# 🇩🇪 Deutsch
-
-## 🧩 Was ist ZAIOS?
-
-**ZAIOS** ist ein vollständig integriertes, modulares Open-Source-Betriebssystem für Unternehmen.  
-Es kombiniert HR, IT-Service, Benutzerverwaltung, DNS, Mailserver, Ticketsystem, Standortverwaltung und Sicherheitsfunktionen in einer einzigen, modernen, webbasierten Plattform.
-
-ZAIOS läuft als **eigene Linux-Distribution** oder optional als **VM-Komplettpaket**.
-
----
-
-## 🎯 Vision
-
-ZAIOS soll:
-
-- alle Unternehmensprozesse zentralisieren  
-- ausschließlich lokal und DSGVO-konform laufen  
-- modular und intuitiv erweiterbar bleiben  
-- eine Community-basierte Weiterentwicklung ermöglichen  
-- Führungskräften, HR und IT eine klare, moderne Oberfläche bieten  
-
-Das Ergebnis ist ein All-In-One-Unternehmensbetriebssystem.
-
----
-
-## 🚀 Kernfunktionen (geplant)
-
-### 🖥️ Betriebssystem & Infrastruktur
-- Eigene Linux-Distribution (Debian-basiert)  
-- Optional als vorgefertigte VM  
-- Webbasierte Oberfläche für alle Module  
-- Eingebaute WAF (Web Application Firewall)  
-- Integrierter DNS-Server  
-- Optional integrierter Mailserver  
-- Lokale Datenhaltung (DSGVO-konform)  
-- Automatische Sicherheitsupdates  
-
----
-
-## 👥 Benutzer- & Rollenverwaltung
-- Lokale Benutzerverwaltung  
-- Integration in:
-  - Microsoft Entra ID (Azure AD)  
-  - Active Directory  
-  - LDAP  
-- Single-Sign-On (geplant)  
-- Rollenbasierte Sichtbarkeit und Zugriffsrechte  
-
----
-
-## 🧑‍💼 Digitale Personalakte (HR)
-- Vollständige Personalakte  
-- Rollen, Berechtigungen, Einsatzorte  
-- Lizenz- & Gerätezuordnung  
-- Kostenübersicht (Gehalt, Lizenzen, Geräte)  
-- Optionale Verbindung zu HR-Systemen (z. B. LOGA)  
-
----
-
-## ⚽ Team-View wie ein Fußballmanager
-
-Führungskräfte erhalten eine moderne Übersicht, inspiriert von einem **Fußballmanager**:
-
-- Übersicht aller Mitarbeitenden eines Teams  
-- Kosten pro Mitarbeiter:
-  - Gehalt  
-  - Lizenzkosten  
-  - Gerätenutzung  
-- (Optional) wirtschaftlicher Beitrag / Einnahmen  
-- Klicken auf Mitarbeiter öffnet ein interaktives Profil:
-  - Daten  
-  - Rollen  
-  - Berechtigungen  
-  - Assets  
-  - Lizenzen  
-  - Tickets  
-- Direkt-Aktionen:
-  - Lizenz beantragen / entziehen  
-  - Zugang erstellen / deaktivieren  
-  - Gerät bestellen  
-  - Ticket automatisch erstellen  
-
----
-
-## 🛠️ Integriertes Ticketsystem
-
-- Kein externes Ticketsystem nötig  
-- Tickets für Störungen, Änderungen, Zugänge, Geräte  
-- Automatische Ticketgenerierung aus Benutzer- oder Modulaktionen  
-- Öffentlicher Zugriff möglich (siehe Public Access)  
-- Ticketübersicht pro Mitarbeiter und pro Standort  
-
----
-
-## 🌐 Public Access (Öffentliche Erreichbarkeit)
-
-Alle Module sind **browserbasiert**.  
-Wenn ZAIOS eine öffentliche IP hat, kann der Admin im Backend einfach aktivieren:
-
-> **„Extern erreichbar machen“**
-
-Dann zeigt ZAIOS einen Link wie:  
-`https://123.45.67.89` oder `https://servicedesk.deinefirma.de`
-
-### Was ZAIOS automatisch macht:
-- Webserver für externen Zugriff freigeben  
-- Interne Firewall konfigurieren  
-- Hinweise zu Sicherheit anzeigen  
-
-### Was extern eingestellt werden muss:
-- Portfreigabe (z. B. Router / Firewall)  
-- DNS-Eintrag für eigene Domain  
-
-### Aber:
-ZAIOS erklärt **alles Schritt für Schritt**, verständlich für Anfänger:  
-**„Einrichtung für Dummies“**.  
-Der Assistent führt durch Portfreigabe, DNS-Einrichtung, Zertifikate und empfohlene Sicherheitseinstellungen.
-
----
-
-## 💾 Erweiterbare Module
-- Dokumentenmanagement  
-- Standortverwaltung  
-- Assetmanagement  
-- Kalender & Planung  
-- Reporting & Dashboards  
-- Automatisierungen  
-- Benachrichtigungssystem  
-
----
-
-## 🔓 Open Source – GNU GPL v3
-
-ZAIOS wird unter der **GNU GPL v3** veröffentlicht.  
-Diese Lizenz stellt sicher:
-
-- frei nutzbar  
-- frei veränderbar  
-- Verbesserungen müssen ebenfalls offen bleiben  
-- niemand kann das Projekt in ein Closed-Source-Produkt verwandeln  
-
----
-
-## 🛠️ Projektstatus
-
-Das Projekt befindet sich in der frühen Startphase.  
-Die Struktur, Module und Architektur werden aktiv entwickelt.
-
----
-
-## 🤝 Mitwirken
-
-Mitmachen ist ausdrücklich erwünscht:
-
-- ⭐ Repo beobachten  
-- Ideen einreichen  
-- Issues erstellen  
-- Diskussionen starten  
-- Code beitragen (sobald verfügbar)  
-
----
-
-## 💡 Projektleitung
-
-**Projektinitiator:** Zeo-ID  
-GitHub: https://github.com/Zeo-ID  
+[🇬🇧 English](#-english-version) | [🇩🇪 Deutsch](#-deutsch)
 
 ---
 
@@ -178,10 +9,10 @@ GitHub: https://github.com/Zeo-ID
 
 ## 🧩 What is ZAIOS?
 
-**ZAIOS** is a fully integrated, modular open-source operating system designed for companies.  
-It unifies HR, IT service management, user administration, DNS, mail server, ticketing, organizational structures and security modules into one modern, browser-based platform.
+**ZAIOS** is a fully integrated, modular open-source operating system designed for modern organizations.  
+It unifies HR, IT service management, user administration, DNS, mail server, ticketing, security and organizational tools into one modern, browser-based platform.
 
-ZAIOS runs as a **dedicated Linux distribution** or as an **optional VM package**.
+ZAIOS can run as a **standalone Linux distribution** or as a **preconfigured virtual machine (VM)**.
 
 ---
 
@@ -189,135 +20,146 @@ ZAIOS runs as a **dedicated Linux distribution** or as an **optional VM package*
 
 ZAIOS aims to:
 
-- centralize all core company processes  
-- run completely local and GDPR-compliant  
-- stay modular and extendable  
-- support community-driven development  
-- offer a modern interface for managers, HR and IT  
+- centralize essential business processes  
+- operate fully local and GDPR-compliant  
+- offer a modular and intuitive interface  
+- empower collaboration through open-source development  
+- give leadership, HR, and IT a clear and modern overview  
 
-The result is an all-in-one enterprise operating system.
+The goal is a complete All-In-One operating system for organizations.
 
 ---
 
-## 🚀 Key Features (planned)
+## 🚀 Core Features (planned)
 
 ### 🖥️ Operating System & Infrastructure
 - Custom Linux distribution (Debian-based)  
 - Optional VM image  
-- Web-based UI for all modules  
+- Web-based interface for all modules  
 - Built-in WAF (Web Application Firewall)  
 - Integrated DNS server  
-- Optional mail server  
-- Full local data processing (GDPR compliant)  
-- Automatic security updates  
+- Optional integrated mail server  
+- Local data processing (GDPR-compliant)  
+- Automatic system & security updates  
 
 ---
 
 ## 👥 User & Role Management
-- Local user management  
+- Local user directory  
 - Integration with:
   - Microsoft Entra ID (Azure AD)  
   - Active Directory  
   - LDAP  
-- Role-based access  
-- Single-sign-on planned  
+- Role-based access control (RBAC)  
+- Single sign-on planned  
 
 ---
 
-## 🧑‍💼 Digital HR File
-- Complete personnel file  
+## 🧑‍💼 Digital Personnel File (HR Module)
+
+- Complete digital employee file  
 - Roles, permissions, locations  
-- Device & license assignment  
-- Cost overview  
-- Optional HR system integration (e.g., LOGA)  
+- Device & license assignments  
+- Cost overview (salary, devices, licenses)  
+- Optional integration with external HR systems (e.g., LOGA)  
 
 ---
 
-## ⚽ Team View (Football Manager Style)
+## ⚽ Team View – Inspired by Football Manager
 
-Leaders get a powerful overview inspired by **football manager interfaces**:
+A unique leadership dashboard that visualizes teams like a football manager game:
 
-- Team overview  
-- Cost breakdown per employee:
+- Overview of all employees in a department  
+- Employee cost overview:
   - salary  
   - license costs  
   - device costs  
-- (Optional) financial contribution  
-- Clicking an employee opens a detailed profile:
+- Optional: revenue / contribution metrics  
+- Click an employee to open a detailed profile:
   - personal data  
   - permissions  
-  - assets  
+  - devices  
   - licenses  
   - tickets  
-- Quick actions:
-  - request/remove license  
+- Direct actions:
+  - request/remove licenses  
   - create/disable access  
-  - order device  
-  - auto-create tickets  
+  - order devices  
+  - auto-generate tickets  
 
 ---
 
 ## 🛠️ Integrated Ticket System
 
-- No external ticket solution needed  
-- Supports incident, change, access and asset requests  
-- Auto-generated tickets from actions in modules  
-- Public access toggle available  
-- Ticket history per employee  
+- No external ticket system required  
+- Tickets for incidents, requests, changes, and access  
+- Automatic ticket creation from workflows  
+- Public access mode available  
+- Ticket history per user and per location  
 
 ---
 
 ## 🌐 Public Access Mode
 
-All modules run in the browser.  
-If ZAIOS has a public IP, the admin can activate:
+All modules are **accessible through a web browser**.
 
-> **"Enable public access"**
+If ZAIOS has a public IP, administrators can enable:
 
-ZAIOS then displays a generated link like:  
-`https://123.45.67.89` or `https://servicedesk.company.com`
+> **“Enable Public Access”**
+
+ZAIOS will then generate a link such as:
+
+`https://123.45.67.89`  
+or  
+`https://servicedesk.yourcompany.com`
 
 ### ZAIOS handles internally:
-- opening the web service externally  
-- adjusting internal firewall settings  
-- providing security recommendations  
+- enabling external web access  
+- configuring internal firewall rules  
+- showing security recommendations  
 
-### External requirements:
+### External steps required:
 - router/firewall port forwarding  
-- DNS configuration  
+- DNS configuration for your domain  
 
-### But:
-A guided wizard explains **everything step-by-step**,  
-suitable even for complete beginners (**"setup for dummies"**).
+### Guided Setup (for beginners)
+
+Everything that must be set up outside the system is explained in a  
+**step-by-step "Setup for Dummies" wizard**, making configuration simple even for non-experts.
 
 ---
 
-## 💾 Extendable Modules
+## 🔌 Extendable Modular System
+
+ZAIOS supports additional modules:
+
 - Document management  
-- Location management  
 - Asset management  
+- Location/branch management  
 - Calendar & planning  
 - Reporting & dashboards  
-- Automation  
+- Automation engine  
 - Notification system  
 
 ---
 
 ## 🔓 Open Source – GNU GPL v3
 
-ZAIOS is released under the **GNU GPL v3**.  
-This ensures:
+ZAIOS is licensed under the **GNU General Public License v3**.
 
-- freedom to use  
-- freedom to modify  
-- derived works must stay open  
-- no one can turn it into a closed-source product  
+This guarantees:
+
+- free use  
+- free modification  
+- all derived works must remain open  
+- no company can turn ZAIOS into a closed-source product  
 
 ---
 
 ## 🛠️ Project Status
 
-The project is in early development and actively evolving.
+ZAIOS is currently in early development.  
+Architecture, modules and system structure are actively being built.
 
 ---
 
@@ -325,11 +167,11 @@ The project is in early development and actively evolving.
 
 Contributions are welcome:
 
-- ⭐ star the repository  
-- open issues  
-- submit ideas  
-- join discussions  
-- submit code (once available)  
+- ⭐ Star the repository  
+- Submit ideas  
+- Open issues  
+- Participate in discussions  
+- Contribute code when modules are available  
 
 ---
 
@@ -340,7 +182,176 @@ GitHub: https://github.com/Zeo-ID
 
 ---
 
-### 🟢 “Central. Secure. Future.”  
-**ZAIOS – The All-In-One Operating System for Modern Organizations.**
+# 🇩🇪 Deutsch
 
+## 🧩 Was ist ZAIOS?
 
+**ZAIOS** ist ein vollständig integriertes, modulares Open-Source-Betriebssystem für Unternehmen.  
+Es vereint HR, IT-Services, Benutzerverwaltung, DNS, Mailserver, Ticketsystem, Sicherheits- und Organisationsmodule in einer modernen, browserbasierten Oberfläche.
+
+ZAIOS läuft entweder als **eigene Linux-Distribution** oder als **vorkonfigurierte VM**.
+
+---
+
+## 🎯 Vision
+
+ZAIOS soll:
+
+- zentrale Unternehmensprozesse bündeln  
+- lokal und DSGVO-konform arbeiten  
+- modular, intuitiv und erweiterbar sein  
+- gemeinschaftliche Entwicklung ermöglichen  
+- Führung, HR und IT eine klare Übersicht bieten  
+
+Das Ziel: Ein vollständiges All-In-One Betriebssystem für Organisationen.
+
+---
+
+## 🚀 Zentrale Funktionen (geplant)
+
+### 🖥️ Betriebssystem & Infrastruktur
+- Eigene Linux-Distribution (Debian-basiert)  
+- Optional als VM  
+- Webbasierte Oberfläche  
+- Integrierte WAF  
+- Integrierter DNS-Server  
+- Optionaler Mailserver  
+- Lokale Datenhaltung (DSGVO-konform)  
+- Automatische Updates  
+
+---
+
+## 👥 Benutzer- & Rollenverwaltung
+- Lokale Benutzerverwaltung  
+- Anbindung an:
+  - Microsoft Entra ID  
+  - Active Directory  
+  - LDAP  
+- Rollenbasierte Rechte (RBAC)  
+- Single-Sign-On geplant  
+
+---
+
+## 🧑‍💼 Digitale Personalakte
+
+- Vollständige Personalakte  
+- Rollen, Berechtigungen, Einsatzorte  
+- Geräte- & Lizenzzuordnung  
+- Kostenübersicht (Gehalt, Geräte, Lizenzen)  
+- Anbindung an HR-Systeme möglich  
+
+---
+
+## ⚽ Team-Übersicht – wie ein Fußballmanager
+
+Eine moderne Übersicht für Führungskräfte:
+
+- Anzeige aller Mitarbeitenden eines Teams  
+- Kostenübersicht pro Person:
+  - Gehalt  
+  - Lizenzkosten  
+  - Gerätekosten  
+- Optional: wirtschaftlicher Beitrag  
+- Klick auf Mitarbeitenden öffnet Profil:
+  - Daten  
+  - Berechtigungen  
+  - Geräte  
+  - Lizenzen  
+  - Tickets  
+- Direktaktionen:
+  - Lizenz beantragen/entziehen  
+  - Zugang erstellen/deaktivieren  
+  - Gerät bestellen  
+  - Ticket automatisch erstellen  
+
+---
+
+## 🛠️ Integriertes Ticketsystem
+
+- Kein externes Ticketsystem nötig  
+- Tickets für Störungen, Zugänge, Änderungen, Anforderungen  
+- Automatische Ticketerstellung  
+- Öffentlicher Zugriff möglich  
+- Ticketverlauf je Mitarbeiter  
+
+---
+
+## 🌐 Öffentlicher Zugriff
+
+Alle Module sind **über den Browser erreichbar**.
+
+Hat ZAIOS eine öffentliche IP, kann man im Adminbereich aktivieren:
+
+> **„Öffentlichen Zugriff aktivieren“**
+
+ZAIOS erzeugt dann einen Link wie:
+
+`https://123.45.67.89`  
+oder  
+`https://servicedesk.deinefirma.de`
+
+### Intern übernimmt ZAIOS:
+- Freigabe des Webdienstes  
+- Firewall-Konfiguration  
+- Sicherheitshinweise  
+
+### Extern nötig:
+- Portfreigabe  
+- DNS-Eintrag  
+
+### Einrichtungsassistent
+
+Alles, was außerhalb eingestellt werden muss, wird im  
+**„Einrichtung Schritt für Schritt – für Dummies“**-Modus erklärt.
+
+---
+
+## 🔌 Erweiterbare Module
+
+- Dokumentenmanagement  
+- Assetmanagement  
+- Standortverwaltung  
+- Planung & Kalender  
+- Reporting  
+- Automatisierung  
+- Benachrichtigungen  
+
+---
+
+## 🔓 Open Source – GNU GPL v3
+
+Die Lizenz garantiert:
+
+- freie Nutzung  
+- freie Bearbeitung  
+- Weiterentwicklungen müssen offen bleiben  
+- kein Unternehmen kann ZAIOS proprietär machen  
+
+---
+
+## 🛠️ Projektstatus
+
+ZAIOS befindet sich in einem frühen Entwicklungsstadium.
+
+---
+
+## 🤝 Mitwirken
+
+Beiträge sind willkommen:
+
+- Repo ⭐ markieren  
+- Ideen einreichen  
+- Issues eröffnen  
+- Diskussionen starten  
+- Code beisteuern  
+
+---
+
+## 💡 Projektleitung
+
+**Projektinitiator:** Zeo-ID  
+GitHub: https://github.com/Zeo-ID  
+
+---
+
+### 🟢 ZAIOS — Central. Secure. Future.
