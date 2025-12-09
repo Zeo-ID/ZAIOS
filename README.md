@@ -1,7 +1,7 @@
 # ZAIOS – Zentral All-In-One System  
 Ein modulares, Linux-basiertes Open-Source-Betriebssystem für IT-, HR-, Organisation- und Servicemanagement.
 
-[🇩🇪 Deutsch](#deutsch-) | [🇬🇧 English](#english-version-)
+[🇩🇪 Deutsch](#-deutsch) | [🇬🇧 English](#-english-version)
 
 ---
 
