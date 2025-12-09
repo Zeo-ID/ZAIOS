@@ -1,0 +1,204 @@
+# ZAIOS – Roadmap  
+A modular, open-source All-In-One system for IT, HR, Organization and Service Management.
+
+This roadmap outlines the planned development steps from the very first prototype to a fully modular OS-based platform.
+
+---
+
+# 🧱 Phase 0 – Foundation & Planning
+
+## **0.0.1 – Repository & Documentation**
+- Create GitHub repository ✔
+- Add `README.md` (EN/DE)
+- Add `LICENSE` (GPLv3)
+- Add `ROADMAP.md`
+- Create initial project structure:
+  - `backend/`
+  - `frontend/`
+  - `os/`
+  - `docs/`
+
+## **0.0.2 – Development Environment**
+- Set up development machine (Linux recommended)
+- Install VM solution (VirtualBox / KVM / Proxmox)
+- Clone project repository
+- Create a simple dev guide: `docs/dev-setup.md`
+
+---
+
+# 🌐 Phase 1 – Core Platform (Prototype)
+
+## **0.1.0 – Basic Web Service (“Hello ZAIOS”)**
+- Minimal backend (FastAPI, Express or similar)
+- Route: `GET /health` → `{ "status": "ok" }`
+- Serve simple webpage: “Welcome to ZAIOS”
+- Dockerfile or simple run script
+- Document how to access it via browser
+
+## **0.1.1 – Basic Frontend Shell**
+- Create modern UI foundation (React/Vue)
+- Layout:
+  - top bar with ZAIOS logo
+  - left navigation panel
+- Dummy dashboard page
+- Connect frontend to backend health endpoint
+
+## **0.1.2 – Authentication (Local)**
+- Local login (username/password)
+- Session/token handling
+- Roles:
+  - `admin`
+  - `viewer`
+- Login/logout UI
+- Access protection for admin functions
+
+---
+
+# 🧑‍💼 Phase 2 – User, Roles & Personnel Base
+
+## **0.2.0 – User & Role Management**
+- User model (name, email, role, status)
+- CRUD endpoints
+- User list in UI
+- Basic permissions system
+
+## **0.2.1 – Digital Personnel File (HR Base)**
+- Employee model:
+  - personal data
+  - role / position
+  - site / location
+- Employee detail page
+- Link employee ↔ system user (optional early)
+
+---
+
+# ⚽ Phase 3 – Team View (Football Manager Style)
+
+## **0.3.0 – Team Overview**
+- Models:
+  - locations
+  - departments
+  - teams
+- Team view UI inspired by football managers:
+  - employee cards
+  - basic cost indicators (dummy/static first)
+
+## **0.3.1 – Employee Profile Actions (Mock)**
+- Profile extensions:
+  - devices (dummy)
+  - licenses (dummy)
+- Action buttons:
+  - request license
+  - revoke license
+  - create ticket
+- Actions stored as simple log entries for now
+
+---
+
+# 🎫 Phase 4 – Integrated Ticket System
+
+## **0.4.0 – Ticket Core**
+- Ticket model:
+  - type, status, requester, assignee
+  - timestamps
+- CRUD endpoints
+- Link tickets to employees/users
+
+## **0.4.1 – Ticket UI**
+- Ticket list with filters
+- Ticket detail page
+- Ticket history per employee
+- Status updates + assignment system
+
+---
+
+# 🔐 Phase 5 – Security & Built-In WAF
+
+## **0.5.0 – Security Foundation**
+- HTTPS enforcement (documentation/demo)
+- Security headers
+- Login attempt limit
+- Security overview in admin panel
+
+## **0.5.1 – Integrated WAF (Basic Ruleset)**
+- Define internal WAF architecture
+- Implement minimal rule engine or integrate existing WAF component
+- First protection rules:
+  - block SQL injection patterns
+  - block XSS patterns
+  - brute-force protection
+- Logging system for blocked requests
+
+---
+
+# 🌍 Phase 6 – Public Access Mode
+
+## **0.6.0 – Public Access Toggle**
+- Admin option: “Enable Public Access”
+- Automatically generate external access URL:
+  - using public IP or configured hostname
+- Display security warning when enabled
+
+## **0.6.1 – Setup Wizard (“For Dummies”)**
+- Step-by-step instructions for:
+  - firewall / port forwarding
+  - DNS setup
+  - certificate setup (later)
+- Simple, beginner-friendly UI
+- Extended documentation in `docs/`
+
+---
+
+# 🧩 Phase 7 – Modular Integration System
+
+## **0.7.0 – Module System Architecture**
+- Define module standards (backend + frontend)
+- Plugin registration system
+- Standardized API communication
+
+## **0.7.1 – External Integrations (Design Phase)**
+- Plan possible integration modules:
+  - Microsoft Entra ID / Azure AD
+  - Active Directory / LDAP
+  - HR systems (e.g., LOGA)
+- Document requirements in: `docs/integrations.md`
+
+---
+
+# 🧪 Phase 8 – Alpha Release
+
+## **0.8.0 – Internal Alpha**
+- Working prototype combining:
+  - login + roles
+  - team view
+  - HR base
+  - ticket system
+  - basic WAF
+  - public mode toggle
+- Create `ALPHA.md`
+- Collect feedback via GitHub Discussions/Issues
+
+---
+
+# 🚀 Phase 9 – Beta & Public Release
+
+## **0.9.x – Beta Preparation**
+- Stabilize backend & UI
+- Improve WAF ruleset
+- Add basic reporting (cost overview)
+- Add system-wide logging & monitoring
+
+## **1.0.0 – Public Beta**
+- First downloadable release
+- Installation guide
+- VM image or container release
+- Security disclaimer
+- Open for community contributions
+
+---
+
+# 📌 Notes
+- Roadmap is flexible; priorities may change.  
+- Community feedback will influence future modules.  
+- Goal: A powerful, modular, open-source all-in-one management system.
+
