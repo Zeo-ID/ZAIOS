@@ -112,16 +112,25 @@ This roadmap outlines the planned development steps from the very first prototyp
 
 ---
 
-# 🔐 Phase 5 – Security & Built-In WAF
+# 🔐 Phase 5 – Security, Reverse Proxy & WAF
 
 ## **0.5.0 – Security Foundation**
-- HTTPS enforcement (documentation/demo)
+- HTTPS enforcement via reverse proxy
 - Security headers
 - Login attempt limit
 - Security overview in admin panel
 
-## **0.5.1 – Integrated WAF (Basic Ruleset)**
-- Define internal WAF architecture
+## **0.5.1 – Integrated Reverse Proxy**
+- Add internal proxy layer
+- Route:
+  - `/` frontend
+  - `/api/` backend
+- Central logging
+- SSL/TLS handling (later automation)
+- Base configuration documentation
+
+## **0.5.2 – Integrated WAF (Basic Ruleset)**
+- Define WAF architecture
 - Implement minimal rule engine or integrate existing WAF component
 - First protection rules:
   - block SQL injection patterns
@@ -135,16 +144,18 @@ This roadmap outlines the planned development steps from the very first prototyp
 
 ## **0.6.0 – Public Access Toggle**
 - Admin option: “Enable Public Access”
-- Automatically generate external access URL:
-  - using public IP or configured hostname
+- Reverse proxy exposes frontend/API externally
+- Automatically generate external access URL via:
+  - detected public IP  
+  - or configured hostname  
 - Display security warning when enabled
 
 ## **0.6.1 – Setup Wizard (“For Dummies”)**
 - Step-by-step instructions for:
   - firewall / port forwarding
-  - DNS setup
-  - certificate setup (later)
-- Simple, beginner-friendly UI
+  - optional DNS setup (if the user wants a domain)
+  - HTTPS certificates (planned automation)
+- Beginner-friendly UI
 - Extended documentation in `docs/`
 
 ---
@@ -152,12 +163,12 @@ This roadmap outlines the planned development steps from the very first prototyp
 # 🧩 Phase 7 – Modular Integration System
 
 ## **0.7.0 – Module System Architecture**
-- Define module standards (backend + frontend)
+- Define standards for UI + backend modules
 - Plugin registration system
-- Standardized API communication
+- Unified API communication layer
 
 ## **0.7.1 – External Integrations (Design Phase)**
-- Plan possible integration modules:
+- Plan integration modules for:
   - Microsoft Entra ID / Azure AD
   - Active Directory / LDAP
   - HR systems (e.g., LOGA)
@@ -173,6 +184,7 @@ This roadmap outlines the planned development steps from the very first prototyp
   - team view
   - HR base
   - ticket system
+  - reverse proxy
   - basic WAF
   - public mode toggle
 - Create `ALPHA.md`
@@ -201,4 +213,3 @@ This roadmap outlines the planned development steps from the very first prototyp
 - Roadmap is flexible; priorities may change.  
 - Community feedback will influence future modules.  
 - Goal: A powerful, modular, open-source all-in-one management system.
-
