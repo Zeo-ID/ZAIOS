@@ -10,7 +10,7 @@ A modular, Linux-based open-source operating system for IT, HR, organizational, 
 ## 🧩 What is ZAIOS?
 
 **ZAIOS** is a fully integrated, modular open-source operating system designed for modern organizations.  
-It unifies HR, IT service management, user administration, DNS, mail server, ticketing, security, and organizational tools into one modern, browser-based platform.
+It unifies HR, IT service management, user administration, mail server, ticketing, reverse proxy, security, and organizational tools into one modern, browser-based platform.
 
 ZAIOS can run as a **standalone Linux distribution** or as a **preconfigured virtual machine (VM)**.
 
@@ -34,7 +34,7 @@ ZAIOS aims to:
 - Custom Linux distribution (Debian-based)  
 - Optional VM image  
 - Web-based interface for all modules  
-- Integrated DNS server  
+- Integrated reverse proxy for secure routing  
 - Optional integrated mail server  
 - Local data processing (GDPR-compliant)  
 - Automatic system & security updates  
@@ -44,7 +44,7 @@ ZAIOS aims to:
 ## 🔐 Integrated Web Application Firewall (WAF)
 
 ZAIOS includes a built-in Web Application Firewall designed to protect the entire system from external threats.  
-The WAF filters and analyzes all incoming requests before they reach any module or interface.
+Every incoming request is analyzed before it reaches any module.
 
 ### The WAF protects against:
 - SQL injection  
@@ -56,14 +56,28 @@ The WAF filters and analyzes all incoming requests before they reach any module 
 - Directory traversal attacks  
 
 ### Key Features:
-- **Active request filtering** on system level  
-- **Automatic blocking** of suspicious or malicious traffic  
-- **Security event logging** for administrators  
-- **Automatic rule updates** (local, no external servers)  
-- **Hardened public access** when exposed to the internet  
-- Works reliably in **local intranet** and **public networks**  
+- **Active request filtering**  
+- **Automatic blocking** of malicious traffic  
+- **Security event logging**  
+- **Local rule updates** (no external servers required)  
+- **Hardened public access** when modules are exposed  
+- Works in **intranet** and **public networks**  
 
 The WAF ensures that ZAIOS remains secure even when administrators enable *Public Access Mode*.
+
+---
+
+## 🔁 Integrated Reverse Proxy
+
+ZAIOS uses a built-in reverse proxy to:
+
+- route all internal services through one secure entry point  
+- handle HTTPS certificates  
+- enable the Public Access Mode  
+- centralize logging and security  
+- protect backend services  
+
+This makes deployment simpler and significantly increases security.
 
 ---
 
@@ -93,18 +107,11 @@ The WAF ensures that ZAIOS remains secure even when administrators enable *Publi
 A unique leadership dashboard that visualizes teams like a football manager simulation:
 
 - Overview of all employees in a team  
-- Individual cost structure:
-  - salary  
-  - licenses  
-  - devices  
-- Optional financial contribution metrics  
-- Interactive employee profile:
-  - permissions  
-  - assets  
-  - licenses  
-  - active tickets  
+- Individual cost structure  
+- Optional financial contribution data  
+- Interactive employee profiles  
 - Quick actions:
-  - request/remove licenses  
+  - assign/remove licenses  
   - activate/deactivate access  
   - order devices  
   - auto-generate tickets  
@@ -113,11 +120,11 @@ A unique leadership dashboard that visualizes teams like a football manager simu
 
 ## 🛠️ Integrated Ticket System
 
-- No external ticket solution required  
-- Tickets for incidents, requests, changes, access  
-- Auto-generated tickets from actions inside the modules  
+- Fully built-in ticketing  
+- Incidents, requests, access, changes  
+- Tickets auto-generated from HR/IT actions  
 - Public access mode available  
-- Full ticket history per employee and per location  
+- Ticket history per employee and location  
 
 ---
 
@@ -136,25 +143,26 @@ or
 `https://servicedesk.yourcompany.com`
 
 ### Internally handled by ZAIOS:
-- enabling external web access  
-- adjusting firewall rules  
-- showing recommended security notices  
+- activating external access  
+- configuring the reverse proxy  
+- enabling WAF hardening  
+- showing security recommendations  
 
 ### Externally required:
 - port forwarding  
-- DNS configuration  
+- optional DNS configuration
 
 ### Setup Wizard (Beginner Mode)
-Everything that must be configured outside the OS is explained in a  
-**step-by-step “Setup for Dummies” wizard**, making public deployment easy even for non-experts.
+All external steps are guided through a  
+**step-by-step “Setup for Dummies” wizard**.
 
 ---
 
 ## 🔌 Extendable Modular System
 
 - Document management  
-- Asset management  
-- Location / branch management  
+- Location management  
+- Device & asset management  
 - Calendar & planning  
 - Reporting dashboards  
 - Automation engine  
@@ -169,14 +177,14 @@ ZAIOS is licensed under the **GNU GPL v3**, guaranteeing:
 - free use  
 - free modification  
 - open development  
-- no possibility of proprietary reuse  
+- no proprietary reuse possible  
 
 ---
 
 ## 🛠️ Project Status
 
 ZAIOS is in early development.  
-Architecture, modules and base system are being actively built.
+Architecture, modules, and the base system are actively being built.
 
 ---
 
@@ -204,7 +212,7 @@ GitHub: https://github.com/Zeo-ID
 ## 🧩 Was ist ZAIOS?
 
 **ZAIOS** ist ein vollständig integriertes, modulares Open-Source-Betriebssystem für Unternehmen.  
-Es vereint HR, IT-Services, Benutzerverwaltung, DNS, Mailserver, Ticketsystem, Sicherheitsmodule und organisatorische Werkzeuge in einer modernen, browserbasierten Oberfläche.
+Es vereint HR, IT-Services, Benutzerverwaltung, Mailserver, Ticketsystem, Reverse-Proxy, Sicherheitsmodule und organisatorische Werkzeuge in einer modernen, browserbasierten Oberfläche.
 
 ZAIOS läuft als **eigene Linux-Distribution** oder als **vorkonfigurierte VM**.
 
@@ -228,7 +236,7 @@ ZAIOS soll:
 - Eigene Linux-Distribution (Debian-basiert)  
 - Optional als VM  
 - Browserbasierte Oberfläche  
-- Integrierter DNS-Server  
+- Integrierter Reverse-Proxy  
 - Optionaler Mailserver  
 - Lokale Datenhaltung  
 - Automatische Sicherheitsupdates  
@@ -237,91 +245,97 @@ ZAIOS soll:
 
 ## 🔐 Integrierte Web Application Firewall (WAF)
 
-ZAIOS verfügt über eine eingebaute Web Application Firewall, die das System vor externen Angriffen schützt.  
-Die WAF filtert und analysiert alle eingehenden Anfragen, bevor sie ein Modul oder eine API erreichen.
+ZAIOS verfügt über eine eingebaute WAF, die das gesamte System schützt:
 
-### Die WAF schützt vor:
+### Schutz vor:
 - SQL-Injection  
-- Cross-Site-Scripting (XSS)  
-- Cross-Site-Request-Forgery (CSRF)  
-- Brute-Force-Angriffen  
-- Unautorisiertem API-Zugriff  
-- Bots & automatisierten Scannern  
-- Directory-Traversal-Angriffen  
+- XSS  
+- CSRF  
+- Brute-Force  
+- Unerlaubtem API-Zugriff  
+- Bots & Scannern  
+- Directory Traversal  
 
 ### Hauptfunktionen:
-- **Aktive Anfragenfilterung**  
-- **Automatisches Blockieren** verdächtiger Zugriffe  
-- **Protokollierung von Sicherheitsereignissen**  
-- **Lokale Regelerneuerung** ohne externe Server  
-- **Gehärteter öffentlicher Zugriff**  
-- Stabil im **Intranet** und im **öffentlichen Internet**  
+- Aktive Anfragefilterung  
+- Automatisches Blockieren  
+- Sicherheitsprotokolle  
+- Lokale Regelupdates  
+- Gehärteter öffentlicher Zugang  
+- Stabil im Intranet & Internet  
 
-Die WAF stellt sicher, dass ZAIOS auch im *öffentlichen Modus* sicher bleibt.
+---
+
+## 🔁 Integrierter Reverse-Proxy
+
+Der Reverse-Proxy übernimmt:
+
+- Routing aller internen Dienste  
+- HTTPS-Zertifikate  
+- Absicherung des öffentlichen Zugangs  
+- Zentrale Protokollierung  
+- Schutz der internen Module  
 
 ---
 
 ## 👥 Benutzer- & Rollenverwaltung
 
-- Lokale Benutzerverwaltung  
+- Lokale Benutzer  
 - Anbindung an:
-  - Microsoft Entra ID  
+  - Entra ID  
   - Active Directory  
   - LDAP  
-- Rollenbasierte Zugriffssteuerung  
+- Rollenbasierte Rechte  
 - SSO geplant  
 
 ---
 
 ## 🧑‍💼 Digitale Personalakte
 
-- Vollständige Personalakte  
+- Vollständige Akten  
 - Rollen, Berechtigungen, Standorte  
-- Geräte- & Lizenzzuordnung  
+- Geräte & Lizenzen  
 - Kostenübersicht  
-- HR-Systemanbindung möglich  
+- Optional: HR-Systemanbindung  
 
 ---
 
 ## ⚽ Team-Übersicht – ähnlich wie ein Fußballmanager
 
-- Übersicht aller Teammitglieder  
+- Teamübersicht  
 - Kosten pro Person  
-- Optional: Einnahmen/Beitragsübersicht  
-- Interaktive Mitarbeiterprofile  
-- Direktaktionen (Lizenzen, Zugänge, Geräte, Tickets)  
+- Optional Einnahmen/Beitrag  
+- Mitarbeiterprofil  
+- Direktaktionen (Lizenzen, Geräte, Tickets)  
 
 ---
 
-## 🛠️ Integriertes Ticketsystem
+## 🛠️ Ticketsystem
 
-- Kein externes Ticketsystem nötig  
-- Störungen, Änderungen, Zugänge, Anfragen  
+- Komplett integriert  
+- Störungen, Anfragen, Änderungen  
 - Automatische Ticketerstellung  
 - Öffentlicher Zugang möglich  
-- Ticketverlauf pro Mitarbeiter  
+- Ticketverlauf pro Person  
 
 ---
 
-## 🌐 Öffentlicher Zugriff
-
-Mit einer öffentlichen IP kann aktiviert werden:
+## 🌐 Öffentlicher Modus
 
 > **„Öffentlichen Zugriff aktivieren“**
 
-ZAIOS erzeugt einen sicheren Link und unterstützt mit Erklärungen sowie Firewallhinweisen.
+ZAIOS öffnet den Reverse-Proxy, aktiviert die WAF und zeigt Hinweise zur Sicherheit.
 
-Der Einrichtungsassistent zeigt alle nötigen externen Schritte in einem  
-**„Schritt-für-Schritt für Dummies“**-Modus.
+Ein **„Schritt-für-Schritt für Dummies“-Assistent** führt durch alle extern notwendigen Schritte.
 
 ---
 
 ## 🔌 Erweiterbare Module
 
-- Dokumentenmanagement  
-- Standortverwaltung  
-- Assetmanagement  
-- Kalender & Planung  
+- Dokumente  
+- Standorte  
+- Assets  
+- Kalender  
 - Reporting  
 - Automatisierung  
 - Benachrichtigungen  
@@ -330,11 +344,9 @@ Der Einrichtungsassistent zeigt alle nötigen externen Schritte in einem
 
 ## 🔓 Open Source – GNU GPL v3
 
-Garantiert:
-
 - freie Nutzung  
-- offene Weiterentwicklung  
-- keine Proprietarisierung möglich  
+- offene Entwicklung  
+- keine proprietäre Übernahme möglich  
 
 ---
 
@@ -350,7 +362,7 @@ ZAIOS befindet sich in einer frühen Entwicklungsphase.
 - Ideen einreichen  
 - Issues öffnen  
 - Mitdiskutieren  
-- Code beisteuern  
+- Code beitragen  
 
 ---
 
