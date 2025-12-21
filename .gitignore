@@ -1,0 +1,14 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Runtime
+data/
+logs/
+.env
+
+# Editor
+*.swp
+*.swo
+
